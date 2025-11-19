@@ -1,0 +1,1 @@
+// fetch('/api/auth'); // Commented out - invalid fetch call

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 Not Found</title>
+    <style>
+        body {
+            background: #0a0a0f;
+            color: #fff;
+            font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+            position: relative;
+        }
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+        .star {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            animation: twinkle 3s infinite;
+        }
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+        .star-small {
+            background: #fff;
+            box-shadow: 0 0 6px #fff;
+        }
+        .star-medium {
+            background: #8ab4f8;
+            box-shadow: 0 0 8px #8ab4f8;
+        }
+        .star-large {
+            background: #2196F3;
+            box-shadow: 0 0 12px #2196F3;
+        }
+        .star-pulse {
+            animation: pulse 4s ease-in-out infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { 
+                opacity: 0.4; 
+                transform: scale(1);
+            }
+            50% { 
+                opacity: 1; 
+                transform: scale(1.2);
+            }
+        }
+        .content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+        }
+        .big-404 {
+            font-size: 8rem;
+            font-weight: bold;
+            color: #2196F3;
+            text-shadow: 0 4px 32px #2196F3, 0 2px 8px #000;
+            margin-bottom: 0.2em;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+        @keyframes glow {
+            from { text-shadow: 0 4px 32px #2196F3, 0 2px 8px #000; }
+            to { text-shadow: 0 4px 48px #2196F3, 0 2px 16px #000, 0 0 64px #2196F3; }
+        }
+        .message {
+            font-size: 1.5rem;
+            margin-bottom: 1.5em;
+            color: #8ab4f8;
+            text-align: center;
+        }
+        .home-btn {
+            background: linear-gradient(135deg, #2196F3 0%, #1976D2 100%);
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 16px 32px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 4px 24px #2196f355;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .home-btn:hover {
+            background: linear-gradient(135deg, #1976D2 0%, #2196F3 100%);
+            transform: scale(1.05);
+            box-shadow: 0 6px 32px #2196f366;
+        }
+        .home-btn:before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: all 0.5s ease;
+        }
+        .home-btn:hover:before {
+            width: 300px;
+            height: 300px;
+        }
+        .space-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(ellipse at center, #1a1a2e 0%, #16213e 50%, #0a0a0f 100%);
+            z-index: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="space-bg"></div>
+    <div class="stars"></div>
+    <div class="content">
+        <div class="big-404">404</div>
+        <div class="message">Lost? The page you're looking for doesn't exist.</div>
+        <button class="home-btn" onclick="window.location.href='/'">
+            <span style="position: relative; z-index: 1;">Home page</span>
+        </button>
+    </div>
+    <script>
+        function createStars() {
+            const starsContainer = document.querySelector('.stars');
+            for (let i = 0; i < 200; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                
+                const size = Math.random();
+                if (size < 0.4) {
+                    star.classList.add('star-small');
+                    star.style.width = '1px';
+                    star.style.height = '1px';
+                } else if (size < 0.8) {
+                    star.classList.add('star-medium');
+                    star.style.width = '2px';
+                    star.style.height = '2px';
+                } else {
+                    star.classList.add('star-large');
+                    star.style.width = '3px';
+                    star.style.height = '3px';
+                }
+                
+                if (Math.random() > 0.7) {
+                    star.classList.add('star-pulse');
+                    star.style.animationDelay = Math.random() * 4 + 's';
+                } else {
+                    star.style.animationDelay = Math.random() * 3 + 's';
+                }
+                
+                star.style.left = Math.random() * 100 + '%';
+                star.style.top = Math.random() * 100 + '%';
+                starsContainer.appendChild(star);
+            }
+        }
+        createStars();
+    </script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "name": "mdi-configs",
+  "version": "1.0.0",
+  "description": "MDI Configs authentication and config server",
+  "main": "mdi.js",
+  "scripts": {
+    "start": "node mdi.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "mongodb": "^5.7.0"
+  },
+  "author": "mdi",
+  "license": "MIT"
+}

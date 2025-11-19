@@ -1,0 +1,3060 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' https:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self' https:;">
+    <title>memesneeze</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/disable-devtool@latest"></script>
+    <script>
+        if (typeof DisableDevtool !== 'undefined') {
+            DisableDevtool({
+                md5: 'a8b9c0d1e2f3g4h5i6j7k8l9m0n1o2p3', // MD5 hash for bypass key
+                url: 'http://mydeadlyintellect.xyz/404',
+                tkName: 'ddtk', // Default bypass parameter name
+                interval: 200, // Detection interval in ms
+                disableMenu: true, // Disable right-click menu
+                disableSelect: true, // Disable text selection
+                disableCopy: true, // Disable copy
+                disableCut: true, // Disable cut
+                disablePaste: true, // Disable paste
+                clearLog: true, // Clear console logs
+                clearIntervalWhenDevOpenTrigger: false, // Keep monitoring after trigger
+                stopIntervalTime: 3000, // Stop monitoring on mobile after 3s
+                detectors: [0, 1, 3, 4, 5, 6, 7], // Enable most detectors (excluding size detector)
+                ondevtoolopen: (type, next) => {
+                    console.warn('Developer tools detected! Type:', type);
+                    next(); // Close the window
+                },
+                ignore: () => {
+                    // Allow bypass in development mode
+                    return window.location.hostname === 'localhost' && window.location.search.includes('dev=true');
+                }
+            });
+        }
+    </script>
+    <style>
+        @font-face {
+            font-family: 'ProggyClean';
+            src: url('https://files.catbox.moe/cyxvdd.ttf') format('truetype');
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        :root {
+            --vw: 100vw;
+            --vh: 100vh;
+            --scale: 1;
+            --container-max: clamp(360px, 74vw, 700px);
+            --panel-width: clamp(340px, 36vw, 520px);
+            --panel-max-height: min(calc(var(--vh) * 0.80), 700px);
+            --panel-gap: 40px;
+            --container-offset: calc((var(--panel-width) / 2) + var(--panel-gap));
+            --container-center-x: 50vw;
+
+            /* Design system colors */
+            --color-bg: #0a0a0a;
+            --color-elevation-0: #0f0f0f;
+            --color-elevation-1: #101010;
+            --color-border: #2c2c2c;
+            --color-border-soft: #0a0a0a;
+            --color-text: #a4a4a4;
+            --color-accent: #5671a6;
+            --color-accent-soft: rgba(86, 113, 166, 0.4);
+        }
+        html {
+            font-size: calc(16px * var(--scale));
+        }
+
+        body {
+            font-family: 'ProggyClean', 'Courier New', monospace;
+            background: #0a0a0a;
+            color: #a4a4a4;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow-x: hidden;
+        }
+        
+        /* Acrylic Background with Grid Pattern */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                /* Subtle radial gradients for depth */
+                radial-gradient(circle at 20% 80%, rgba(44, 44, 44, 0.03) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(44, 44, 44, 0.03) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(44, 44, 44, 0.02) 0%, transparent 50%),
+                /* Clean grid pattern */
+                repeating-linear-gradient(
+                    90deg,
+                    transparent,
+                    transparent 1px,
+                    rgba(44, 44, 44, 0.04) 1px,
+                    rgba(44, 44, 44, 0.04) 2px
+                ),
+                repeating-linear-gradient(
+                    0deg,
+                    transparent,
+                    transparent 1px,
+                    rgba(44, 44, 44, 0.04) 1px,
+                    rgba(44, 44, 44, 0.04) 2px
+                );
+            backdrop-filter: blur(0.5px);
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                /* Subtle diagonal pattern */
+                linear-gradient(45deg, transparent 48%, rgba(44, 44, 44, 0.008) 49%, rgba(44, 44, 44, 0.008) 51%, transparent 52%),
+                linear-gradient(-45deg, transparent 48%, rgba(44, 44, 44, 0.008) 49%, rgba(44, 44, 44, 0.008) 51%, transparent 52%),
+                /* Additional depth layer */
+                radial-gradient(circle at 60% 60%, rgba(44, 44, 44, 0.015) 0%, transparent 30%);
+            background-size: 24px 24px, 24px 24px, 100% 100%;
+            pointer-events: none;
+            z-index: -2;
+        }
+        
+        /* Pixelated Snowflakes */
+        .snowflake {
+            position: fixed;
+            color: #5671a6;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            line-height: 1;
+            pointer-events: none;
+            z-index: -1;
+            opacity: 0.6;
+            animation: fall linear infinite;
+        }
+        
+        .snowflake::before {
+            content: '*';
+        }
+        
+        @keyframes fall {
+            0% {
+                transform: translateY(-100vh) rotate(0deg);
+                opacity: 0;
+            }
+            5% {
+                opacity: 0.6;
+            }
+            95% {
+                opacity: 0.6;
+            }
+            100% {
+                transform: translateY(calc(100vh + 50px)) rotate(360deg);
+                opacity: 0;
+            }
+        }
+        
+        /* Different snowflake variations */
+        .snowflake:nth-child(3n)::before {
+            content: '+';
+        }
+        
+        .snowflake:nth-child(5n)::before {
+            content: '·';
+        }
+        
+        .snowflake:nth-child(7n)::before {
+            content: '×';
+        }
+
+        .container {
+            text-align: center;
+            padding: 2rem;
+            max-width: var(--container-max);
+            background: linear-gradient(180deg, #101010 0%, #0f0f0f 100%);
+            border: 1px solid #2c2c2c;
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.035), inset 0 -1px 0 rgba(0,0,0,0.35);
+            position: relative;
+            z-index: 1;
+            transition: transform 0.3s ease-out, max-width 0.3s ease-out;
+            will-change: transform, max-width;
+            cursor: default;
+        }
+
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 1px;
+            right: 1px;
+            height: 1px;
+            background: #5671a6;
+            pointer-events: none;
+        }
+
+        .container::after {
+            content: '';
+            position: absolute;
+            top: 1px;
+            left: 1px;
+            right: 1px;
+            height: 1px;
+            background: rgba(86, 113, 166, 0.4);
+            pointer-events: none;
+        }
+
+        .title-bar {
+            background: linear-gradient(180deg, #121212 0%, #0f0f0f 100%);
+            border-bottom: 1px solid #2c2c2c;
+            padding: 0.5rem 1rem;
+            margin: -2rem -2rem 1rem -2rem;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: default;
+            user-select: none;
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.045), inset 0 -1px 0 rgba(0,0,0,0.4);
+        }
+
+        .title-bar::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 1px;
+            right: 1px;
+            height: 1px;
+            background: #5671a6;
+            pointer-events: none;
+        }
+
+        .title-bar::after {
+            content: '';
+            position: absolute;
+            top: 1px;
+            left: 1px;
+            right: 1px;
+            height: 1px;
+            background: rgba(86, 113, 166, 0.4);
+            pointer-events: none;
+        }
+
+        .window-title {
+            color: #a4a4a4;
+            font-size: 0.9rem;
+            font-weight: normal;
+            margin: 0;
+        }
+
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            color: #5671a6;
+            font-weight: normal;
+            text-transform: lowercase;
+            letter-spacing: 0.1em;
+            font-family: 'Tahoma', sans-serif;
+        }
+
+        /* Interactive underline for main title */
+        .title-interactive {
+            position: relative;
+            display: inline-block;
+            cursor: default;
+        }
+        .title-interactive .title-text {
+            position: relative;
+            display: inline-block;
+            white-space: nowrap;
+        }
+        .title-interactive .cursor-underline {
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+            height: 2px;
+            background: #5671a6;
+            box-shadow: 0 0 0 1px rgba(86, 113, 166, 0.4) inset;
+            opacity: 0;
+            width: 0;
+            transition: left 180ms cubic-bezier(0.22, 1, 0.36, 1),
+                        width 180ms cubic-bezier(0.22, 1, 0.36, 1),
+                        opacity 120ms ease-out;
+            pointer-events: none;
+        }
+        .title-interactive:hover .cursor-underline {
+            opacity: 1;
+        }
+        .title-char {
+            display: inline-block;
+        }
+        
+        /* Micro-animations: buttons and links */
+        .download-button, .control-button, .mute-button, .side-preview-close, .preview-open-button {
+            transition: transform 160ms cubic-bezier(0.22, 1, 0.36, 1),
+                        box-shadow 160ms ease,
+                        border-color 160ms ease,
+                        color 160ms ease,
+                        background 160ms ease;
+            will-change: transform, box-shadow;
+            transform: translateZ(0); /* GPU composite for smoother movement */
+        }
+        .download-button:hover, .control-button:hover, .mute-button:hover, .side-preview-close:hover, .preview-open-button:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 1px 0 rgba(86,113,166,0.35);
+        }
+        .download-button:active, .control-button:active, .mute-button:active, .side-preview-close:active, .preview-open-button:active {
+            transform: translateY(0) scale(0.98);
+            box-shadow: none;
+        }
+        
+        /* Footer link underline slide-in */
+        .footer-links a {
+            background-image: linear-gradient(to right, rgba(86,113,166,0.8), rgba(86,113,166,0.1));
+            background-position: 0 100%;
+            background-repeat: no-repeat;
+            background-size: 0% 1px;
+            transition: color 180ms ease, background-size 180ms cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .footer-links a:hover {
+            background-size: 100% 1px;
+        }
+        
+        /* Status blocks: subtle transitions for state changes */
+        .status {
+            transition: background-color 200ms ease, border-color 200ms ease, color 200ms ease, transform 200ms ease;
+            will-change: background-color, color, border-color;
+        }
+        
+        /* Reduced motion support */
+
+        /* Model preview area styles */
+        #modelPreviewArea {
+            position: relative;
+            min-height: clamp(260px, calc(var(--vh) * 0.5), 520px);
+            background: linear-gradient(180deg, #0b0b0b 0%, #0a0a0a 100%);
+            border: 1px solid #0a0a0a;
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.02), inset 0 -1px 0 rgba(0,0,0,0.4);
+        }
+        #modelPreviewArea::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border: 1px solid #0a0a0a;
+            pointer-events: none;
+        }
+        #modelPreviewArea::after {
+            content: '';
+            position: absolute;
+            top: 1px;
+            left: 1px;
+            right: 1px;
+            bottom: 1px;
+            border: 1px solid #2c2c2c;
+            pointer-events: none;
+        }
+        #modelPreviewArea canvas {
+            display: block;
+            width: 100%;
+            height: auto;
+            border: 1px solid #2c2c2c;
+            background: #111;
+        }
+        @media (max-width: 768px) {
+            #modelPreviewArea { min-height: clamp(220px, 40vh, 420px); }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .download-button, .control-button, .mute-button,
+            .footer-links a, .status {
+                transition: none;
+            }
+        }
+
+        .subtitle {
+            font-size: 0.85rem;
+            color: #888888;
+            margin-bottom: 2rem;
+            line-height: 1.5;
+        }
+
+        .preview-section {
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto 2rem;
+            padding: 0.75rem;
+            border: 1px solid #2c2c2c;
+            background: linear-gradient(180deg, #121212 0%, #101010 100%);
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.03);
+            position: relative;
+        }
+
+        .preview-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border: 1px solid #2c2c2c;
+            pointer-events: none;
+        }
+
+        .preview-section::after {
+            content: '';
+            position: absolute;
+            top: 1px;
+            left: 1px;
+            right: 1px;
+            bottom: 1px;
+            border: 1px solid #0a0a0a;
+            pointer-events: none;
+        }
+
+        .preview-header {
+            background: linear-gradient(180deg, #101010 0%, #0f0f0f 100%);
+            border: 1px solid #2c2c2c;
+            border-bottom: 1px solid #2c2c2c;
+            padding: 0.5rem 1rem;
+            margin: -0.75rem -0.75rem 0.75rem;
+            position: relative;
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.03);
+        }
+
+        .preview-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 1px;
+            right: 1px;
+            height: 1px;
+            background: #5671a6;
+            pointer-events: none;
+        }
+
+        .preview-header::after {
+            content: '';
+            position: absolute;
+            top: 1px;
+            left: 1px;
+            right: 1px;
+            height: 1px;
+            background: rgba(86, 113, 166, 0.4);
+            pointer-events: none;
+        }
+
+        .preview-title {
+            color: #a4a4a4;
+            font-size: 0.9rem;
+            font-weight: normal;
+        }
+
+        .video-container {
+            width: 100%;
+            margin: 0;
+            border: none;
+            background: transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+
+        .video-placeholder {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            background: linear-gradient(180deg, #0b0b0b 0%, #0a0a0a 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #2c2c2c;
+            font-size: 3rem;
+            border: 1px solid #0a0a0a;
+            position: relative;
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.02), inset 0 -1px 0 rgba(0,0,0,0.4);
+        }
+
+        .video-placeholder::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border: 1px solid #0a0a0a;
+            pointer-events: none;
+        }
+
+        .video-placeholder::after {
+            content: '';
+            position: absolute;
+            top: 1px;
+            left: 1px;
+            right: 1px;
+            bottom: 1px;
+            border: 1px solid #2c2c2c;
+            pointer-events: none;
+        }
+
+
+
+        .button-group {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .download-button {
+            display: inline-block;
+            background: linear-gradient(180deg, #121212 0%, #0f0f0f 100%);
+            color: #a4a4a4;
+            padding: 0.6rem 1.5rem;
+            border: 1px solid #0a0a0a;
+            text-decoration: none;
+            font-weight: normal;
+            font-size: 0.8rem;
+            transition: all 0.2s ease;
+            font-family: 'ProggyClean', 'Courier New', monospace;
+            letter-spacing: 0.05em;
+            position: relative;
+            cursor: default;
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.06), inset 0 -1px 0 rgba(0,0,0,0.4), 0 1px 0 rgba(86,113,166,0.15);
+        }
+
+        .download-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border: 1px solid #0a0a0a;
+            pointer-events: none;
+        }
+
+        .download-button::after {
+            content: '';
+            position: absolute;
+            top: 1px;
+            left: 1px;
+            right: 1px;
+            bottom: 1px;
+            border: 1px solid #2c2c2c;
+            pointer-events: none;
+        }
+
+        .download-button:hover {
+            background: linear-gradient(to bottom, #111111, #0f0f0f);
+            color: #a4a4a4;
+        }
+
+        .download-button:hover::before {
+            border: 1px solid #5671a6;
+        }
+
+        .version {
+            color: #888888;
+            font-size: 0.75rem;
+            margin-top: 1rem;
+        }
+        
+        .status {
+            color: #888888;
+            font-size: 0.75rem;
+            margin-top: 0.3rem;
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 2rem;
+            left: 0;
+            right: 0;
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-links a {
+            color: #888888;
+            text-decoration: none;
+            font-size: 0.8rem;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #5671a6;
+        }
+        
+        .discord-link {
+            color: #5865f2 !important;
+            font-weight: normal;
+        }
+        
+        .discord-link:hover {
+            color: #7289da !important;
+        }
+
+        @media (max-height: 700px) {
+            .footer {
+                position: relative;
+                margin-top: 3rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .subtitle {
+                font-size: 0.8rem;
+            }
+
+            .button-group {
+                flex-direction: column;
+                gap: 0.8rem;
+            }
+
+            .footer-links {
+                gap: 1rem;
+                flex-wrap: wrap;
+            }
+            
+            .video-controls {
+                padding: 0.6rem 0.8rem;
+            }
+            
+            .control-row {
+                gap: 0.5rem;
+            }
+            
+            .control-row:first-child {
+                gap: 0.8rem;
+            }
+            
+            .time-display {
+                min-width: 70px;
+                font-size: 0.6rem;
+            }
+            
+            .timeline-container {
+                margin: 0 0.4rem;
+            }
+            
+            .volume-container {
+                max-width: 80px;
+                margin: 0 0.2rem;
+            }
+        }
+        
+        .mute-button {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            background: linear-gradient(180deg, #121212 0%, #0f0f0f 100%);
+            color: #a4a4a4;
+            padding: 0.4rem 0.8rem;
+            border: 1px solid #0a0a0a;
+            text-decoration: none;
+            font-weight: normal;
+            font-size: 0.7rem;
+            transition: all 0.2s ease;
+            font-family: 'ProggyClean', 'Courier New', monospace;
+            letter-spacing: 0.05em;
+            cursor: default;
+            z-index: 10;
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.06), inset 0 -1px 0 rgba(0,0,0,0.4), 0 1px 0 rgba(86,113,166,0.15);
+        }
+        
+        .mute-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border: 1px solid #0a0a0a;
+            pointer-events: none;
+        }
+        
+        .mute-button::after {
+            content: '';
+            position: absolute;
+            top: 1px;
+            left: 1px;
+            right: 1px;
+            bottom: 1px;
+            border: 1px solid #2c2c2c;
+            pointer-events: none;
+        }
+        
+        .mute-button:hover {
+            background: linear-gradient(to bottom, #111111, #0f0f0f);
+            color: #a4a4a4;
+        }
+        
+        .mute-button:hover::before {
+            border: 1px solid #5671a6;
+        }
+        
+        .video-container {
+            position: relative;
+        }
+        
+        .video-container video {
+            width: 100%;
+            height: auto;
+            display: block;
+            border: 1px solid #2c2c2c;
+            background: #111;
+        }
+        
+        .video-container video:not([poster]) {
+            background: linear-gradient(45deg, #111 25%, transparent 25%), 
+                        linear-gradient(-45deg, #111 25%, transparent 25%), 
+                        linear-gradient(45deg, transparent 75%, #111 75%), 
+                        linear-gradient(-45deg, transparent 75%, #111 75%);
+            background-size: 20px 20px;
+            background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+        }
+        
+        .loading-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(17, 17, 17, 0.9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #a4a4a4;
+            font-family: 'ProggyClean', 'Courier New', monospace;
+            font-size: 0.8rem;
+            z-index: 5;
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 280ms ease, transform 280ms ease;
+        }
+        
+        .loading-overlay.hidden {
+            opacity: 0;
+            transform: translateY(2px);
+            pointer-events: none;
+            visibility: hidden;
+        }
+        
+        /* Spinner for loading overlay */
+        .loading-overlay::after {
+            content: '';
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            border: 2px solid rgba(86,113,166,0.2);
+            border-top-color: #5671a6;
+            margin-left: 8px;
+            animation: spin 900ms linear infinite;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        @media (prefers-reduced-motion: reduce) {
+            .loading-overlay { transition: none; }
+            .loading-overlay::after { animation: none; }
+        }
+        
+        /* Custom Video Controls */
+        .video-controls {
+            background: linear-gradient(180deg, rgba(18, 18, 18, 0.9) 0%, rgba(14, 14, 14, 0.85) 100%);
+            backdrop-filter: blur(4px);
+            border-top: 1px solid rgba(44, 44, 44, 0.6);
+            padding: 0.8rem 1rem;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.03);
+        }
+        
+        .video-container:hover .video-controls {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        
+        .video-controls::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 1px;
+            right: 1px;
+            height: 1px;
+            background: #5671a6;
+            pointer-events: none;
+        }
+        
+        .video-controls::after {
+            content: '';
+            position: absolute;
+            top: 1px;
+            left: 1px;
+            right: 1px;
+            height: 1px;
+            background: rgba(86, 113, 166, 0.4);
+            pointer-events: none;
+        }
+        
+        .control-row {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .control-row:last-child {
+            margin-bottom: 0;
+        }
+        
+        .control-row:first-child {
+            gap: 1.2rem;
+        }
+        
+        .control-button {
+            background: linear-gradient(180deg, #121212 0%, #0f0f0f 100%);
+            color: #a4a4a4;
+            padding: 0.3rem 0.6rem;
+            border: 1px solid #0a0a0a;
+            text-decoration: none;
+            font-weight: normal;
+            font-size: 0.65rem;
+            transition: all 0.2s ease;
+            font-family: 'ProggyClean', 'Courier New', monospace;
+            letter-spacing: 0.05em;
+            cursor: default;
+            position: relative;
+            min-width: 50px;
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.06), inset 0 -1px 0 rgba(0,0,0,0.4), 0 1px 0 rgba(86,113,166,0.15);
+        }
+        
+        .control-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border: 1px solid #0a0a0a;
+            pointer-events: none;
+        }
+        
+        .control-button::after {
+            content: '';
+            position: absolute;
+            top: 1px;
+            left: 1px;
+            right: 1px;
+            bottom: 1px;
+            border: 1px solid #2c2c2c;
+            pointer-events: none;
+        }
+        
+        .control-button:hover {
+            background: linear-gradient(to bottom, #111111, #0f0f0f);
+            color: #a4a4a4;
+        }
+        
+        .control-button:hover::before {
+            border: 1px solid #5671a6;
+        }
+        
+        .time-display {
+            color: #a4a4a4;
+            font-size: 0.65rem;
+            font-family: 'ProggyClean', 'Courier New', monospace;
+            letter-spacing: 0.05em;
+            display: flex;
+            align-items: center;
+            gap: 0.15rem;
+            min-width: 80px;
+            justify-content: center;
+            padding: 0.2rem 0.4rem;
+            background: rgba(17, 17, 17, 0.6);
+            border: 1px solid rgba(44, 44, 44, 0.3);
+        }
+        
+        .time-separator {
+            color: #666666;
+        }
+        
+        /* Timeline Slider (inspired by slider.cpp) */
+        .timeline-container {
+            flex: 1;
+            margin: 0 0.8rem;
+            transform: translateY(-2px);
+        }
+        
+        .timeline-track {
+            position: relative;
+            height: 14px;
+            background: linear-gradient(to bottom, #111111, #0f0f0f);
+            border: 1px solid #0a0a0a;
+            cursor: default;
+            border-radius: 0;
+            margin: 0 6px;
+        }
+        
+        .timeline-track::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border: 1px solid #0a0a0a;
+            pointer-events: none;
+        }
+        
+        .timeline-track::after {
+            content: '';
+            position: absolute;
+            top: 1px;
+            left: 1px;
+            right: 1px;
+            bottom: 1px;
+            border: 1px solid #2c2c2c;
+            pointer-events: none;
+        }
+        
+        .timeline-progress {
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            height: 8px;
+            background: linear-gradient(to bottom, #5671a6, #4a5d8a);
+            width: 0%;
+            transition: width 0.1s ease;
+            box-shadow: 0 1px 2px rgba(86, 113, 166, 0.3);
+        }
+        
+        .timeline-thumb {
+            position: absolute;
+            top: 1px;
+            left: 0px;
+            width: 12px;
+            height: 12px;
+            background: linear-gradient(to bottom, #5671a6, #4a5d8a);
+            border: 1px solid #0a0a0a;
+            cursor: default;
+            transition: left 0.1s ease;
+            box-shadow: 0 1px 3px rgba(86, 113, 166, 0.4);
+        }
+        
+        .timeline-thumb::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border: 1px solid #0a0a0a;
+            pointer-events: none;
+        }
+        
+        .timeline-thumb::after {
+            content: '';
+            position: absolute;
+            top: 1px;
+            left: 1px;
+            right: 1px;
+            bottom: 1px;
+            border: 1px solid #2c2c2c;
+            pointer-events: none;
+        }
+        
+        .timeline-thumb:hover {
+            background: linear-gradient(to bottom, #6b7fb8, #5a6d9a);
+        }
+        
+        .timeline-thumb:hover::before {
+            border: 1px solid #5671a6;
+        }
+        
+        /* Volume Slider */
+        .volume-container {
+            flex: 1;
+            max-width: 100px;
+            margin: 0 0.4rem;
+        }
+        
+        .volume-track {
+            position: relative;
+            height: 14px;
+            background: linear-gradient(to bottom, #111111, #0f0f0f);
+            border: 1px solid #0a0a0a;
+            cursor: default;
+        }
+        
+        .volume-track::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border: 1px solid #0a0a0a;
+            pointer-events: none;
+        }
+        
+        .volume-track::after {
+            content: '';
+            position: absolute;
+            top: 1px;
+            left: 1px;
+            right: 1px;
+            bottom: 1px;
+            border: 1px solid #2c2c2c;
+            pointer-events: none;
+        }
+        
+        .volume-progress {
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            height: 8px;
+            background: linear-gradient(to bottom, #5671a6, #4a5d8a);
+            width: 100%;
+            transition: width 0.1s ease;
+            box-shadow: 0 1px 2px rgba(86, 113, 166, 0.3);
+        }
+        
+        .volume-thumb {
+            position: absolute;
+            top: 1px;
+            right: 0px;
+            width: 12px;
+            height: 12px;
+            background: linear-gradient(to bottom, #5671a6, #4a5d8a);
+            border: 1px solid #0a0a0a;
+            cursor: default;
+            transition: right 0.1s ease;
+            box-shadow: 0 1px 3px rgba(86, 113, 166, 0.4);
+        }
+        
+        .volume-thumb::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border: 1px solid #0a0a0a;
+            pointer-events: none;
+        }
+        
+        .volume-thumb::after {
+            content: '';
+            position: absolute;
+            top: 1px;
+            left: 1px;
+            right: 1px;
+            bottom: 1px;
+            border: 1px solid #2c2c2c;
+            pointer-events: none;
+        }
+        
+        .volume-thumb:hover {
+            background: linear-gradient(to bottom, #6b7fb8, #5a6d9a);
+        }
+        
+        .volume-thumb:hover::before {
+            border: 1px solid #5671a6;
+        }
+        
+        /* Modal Overlay */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(8px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .modal {
+            background: #0f0f0f;
+            border: 1px solid #2c2c2c;
+            padding: 1rem;
+            max-width: 300px;
+            width: 90%;
+            text-align: center;
+            position: relative;
+            transform: scale(0.8);
+            transition: transform 0.3s ease;
+            box-shadow: 
+                0 0 0 1px #0a0a0a,
+                0 0 0 1px #1a1a1a,
+                0 0 0 1px #2c2c2c,
+                0 1px 2px rgba(0, 0, 0, 0.5);
+        }
+        
+        .modal-overlay.active .modal {
+            transform: scale(1);
+        }
+        
+        .modal::before {
+            content: '';
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+            background: linear-gradient(45deg, #1a1a1a, #2c2c2c, #1a1a1a);
+            z-index: -1;
+            border-radius: 0;
+        }
+        
+        .modal::after {
+            content: '';
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+            background: #0a0a0a;
+            z-index: -1;
+        }
+        
+        .modal-content {
+            position: relative;
+            padding: 0.8rem;
+            border: 1px solid #2c2c2c;
+            background: #111111;
+        }
+        
+        .modal-content::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 1px;
+            right: 1px;
+            height: 1px;
+            background: #5671a6;
+            pointer-events: none;
+        }
+        
+        .modal-content::after {
+            content: '';
+            position: absolute;
+            top: 1px;
+            left: 1px;
+            right: 1px;
+            height: 1px;
+            background: rgba(86, 113, 166, 0.4);
+            pointer-events: none;
+        }
+        
+        .modal-title {
+            color: #a4a4a4;
+            font-size: 1.2rem;
+            margin-bottom: 1.2rem;
+            font-weight: normal;
+            letter-spacing: 0.05em;
+        }
+        
+        .modal-message {
+            color: #888888;
+            font-size: 0.9rem;
+            margin-bottom: 1.8rem;
+            line-height: 1.5;
+        }
+        
+        .modal-close {
+            background: linear-gradient(180deg, #121212 0%, #0f0f0f 100%);
+            color: #a4a4a4;
+            padding: 0.6rem 1.5rem;
+            border: 1px solid #0a0a0a;
+            text-decoration: none;
+            font-weight: normal;
+            font-size: 0.8rem;
+            transition: all 0.2s ease;
+            font-family: 'ProggyClean', 'Courier New', monospace;
+            letter-spacing: 0.05em;
+            cursor: default;
+            position: relative;
+            display: inline-block;
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.06), inset 0 -1px 0 rgba(0,0,0,0.4), 0 1px 0 rgba(86,113,166,0.15);
+        }
+        
+        .modal-close::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border: 1px solid #0a0a0a;
+            pointer-events: none;
+        }
+        
+        .modal-close::after {
+            content: '';
+            position: absolute;
+            top: 1px;
+            left: 1px;
+            right: 1px;
+            bottom: 1px;
+            border: 1px solid #2c2c2c;
+            pointer-events: none;
+        }
+        
+        .modal-close:hover {
+            background: linear-gradient(to bottom, #111111, #0f0f0f);
+            color: #a4a4a4;
+        }
+        
+        .modal-close:hover::before {
+            border: 1px solid #5671a6;
+        }
+        
+        /* Entrance Animations */
+        .container {
+            opacity: 0;
+            transform: scale(0.95);
+            transition: all 0.8s ease-out;
+        }
+        
+        .container.loaded {
+            opacity: 1;
+            transform: scale(1);
+        }
+        
+        .title-bar {
+            opacity: 0;
+            transform: translateY(-20px);
+            transition: all 0.6s ease-out 0.2s;
+        }
+        
+        .title-bar.loaded {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .title-bar::before,
+        .title-bar::after {
+            width: 0;
+            transition: width 0.8s ease-out 0.4s;
+        }
+        
+        .title-bar.loaded::before,
+        .title-bar.loaded::after {
+            width: calc(100% - 2px);
+        }
+        
+        h1 {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease-out 0.6s;
+        }
+        
+        h1.loaded {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .subtitle {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease-out 0.8s;
+        }
+        
+        .subtitle.loaded {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .preview-section {
+            opacity: 0;
+            transform: scale(0.9) translateY(20px);
+            transition: all 0.7s ease-out 1.0s;
+        }
+        
+        .preview-section.loaded {
+            opacity: 1;
+            transform: scale(1) translateY(0);
+        }
+        
+        .preview-section::before,
+        .preview-section::after {
+            width: 0;
+            transition: width 0.8s ease-out 1.2s;
+        }
+        
+        .preview-section.loaded::before,
+        .preview-section.loaded::after {
+            width: calc(100% - 2px);
+        }
+        
+        .preview-header::before,
+        .preview-header::after {
+            width: 0;
+            transition: width 0.8s ease-out 1.4s;
+        }
+        
+        .preview-section.loaded .preview-header::before,
+        .preview-section.loaded .preview-header::after {
+            width: calc(100% - 2px);
+        }
+        
+        .button-group {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease-out 1.6s;
+        }
+        
+        .button-group.loaded {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .download-button {
+            opacity: 0;
+            transform: scale(0.8);
+            transition: all 0.4s ease-out;
+        }
+        
+        .download-button:nth-child(1) {
+            transition-delay: 1.8s;
+        }
+        
+        .download-button:nth-child(2) {
+            transition-delay: 2.0s;
+        }
+        
+        .button-group.loaded .download-button {
+            opacity: 1;
+            transform: scale(1);
+        }
+        
+        .version, .status {
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 0.5s ease-out 2.2s;
+        }
+        
+        .version.loaded, .status.loaded {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .footer {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease-out 2.4s;
+        }
+        
+        .footer.loaded {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .footer-links a {
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 0.4s ease-out;
+        }
+        
+        .footer-links a:nth-child(1) {
+            transition-delay: 2.6s;
+        }
+        
+        .footer-links a:nth-child(2) {
+            transition-delay: 2.8s;
+        }
+        
+        .footer-links a:nth-child(3) {
+            transition-delay: 3.0s;
+        }
+        
+        .footer.loaded .footer-links a {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* System Requirements Styles */
+        .requirements-section {
+            margin-top: 1.5rem;
+            border: 1px solid #2c2c2c;
+            background: #111111;
+            position: relative;
+            opacity: 0;
+            transform: translateY(30px) scale(0.95);
+            transition: all 0.8s ease-out 2.6s;
+        }
+        
+        .requirements-section.loaded {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+        
+        .requirements-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 1px;
+            right: 1px;
+            height: 1px;
+            background: #5671a6;
+            pointer-events: none;
+            width: 0;
+            transition: width 0.8s ease-out 2.8s;
+        }
+        
+        .requirements-section.loaded::before {
+            width: calc(100% - 2px);
+        }
+        
+        .requirements-section::after {
+            content: '';
+            position: absolute;
+            top: 1px;
+            left: 1px;
+            right: 1px;
+            height: 1px;
+            background: rgba(86, 113, 166, 0.4);
+            pointer-events: none;
+            width: 0;
+            transition: width 0.8s ease-out 3.0s;
+        }
+        
+        .requirements-section.loaded::after {
+            width: calc(100% - 2px);
+        }
+        
+        .requirements-toggle {
+            width: 100%;
+            background: linear-gradient(180deg, #121212 0%, #0f0f0f 100%);
+            color: #a4a4a4;
+            padding: 0.6rem 1rem;
+            border: none;
+            text-decoration: none;
+            font-weight: normal;
+            font-size: 0.8rem;
+            transition: all 0.3s ease;
+            font-family: 'ProggyClean', 'Courier New', monospace;
+            letter-spacing: 0.05em;
+            cursor: default;
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease-out 3.2s;
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.06), inset 0 -1px 0 rgba(0,0,0,0.4), 0 1px 0 rgba(86,113,166,0.15);
+        }
+        
+        .requirements-section.loaded .requirements-toggle {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .requirements-toggle::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border: 1px solid #0a0a0a;
+            pointer-events: none;
+        }
+        
+        .requirements-toggle::after {
+            content: '';
+            position: absolute;
+            top: 1px;
+            left: 1px;
+            right: 1px;
+            bottom: 1px;
+            border: 1px solid #2c2c2c;
+            pointer-events: none;
+        }
+        
+        .requirements-toggle:hover {
+            background: linear-gradient(to bottom, #111111, #0f0f0f);
+            color: #a4a4a4;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(86, 113, 166, 0.2);
+        }
+        
+        .requirements-toggle:hover::before {
+            border: 1px solid #5671a6;
+        }
+        
+        .requirements-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            background: #0f0f0f;
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        
+        .requirements-content.expanded {
+            max-height: 400px;
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .requirements-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            padding: 1rem;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.4s ease-out 0.2s;
+        }
+        
+        .requirements-content.expanded .requirements-grid {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .requirements-column {
+            opacity: 0;
+            transform: translateX(-20px);
+            transition: all 0.4s ease-out;
+        }
+        
+        .requirements-column:nth-child(1) {
+            transition-delay: 0.1s;
+        }
+        
+        .requirements-column:nth-child(2) {
+            transition-delay: 0.2s;
+            transform: translateX(20px);
+        }
+        
+        .requirements-content.expanded .requirements-column {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        .requirements-column h4 {
+            color: #5671a6;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+            font-weight: normal;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 0.3s ease-out;
+        }
+        
+        .requirements-content.expanded .requirements-column h4 {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .requirements-column ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .requirements-column li {
+            color: #888888;
+            font-size: 0.75rem;
+            margin-bottom: 0.3rem;
+            line-height: 1.3;
+            opacity: 0;
+            transform: translateY(5px);
+            transition: all 0.3s ease-out;
+        }
+        
+        .requirements-column li:nth-child(1) { transition-delay: 0.1s; }
+        .requirements-column li:nth-child(2) { transition-delay: 0.15s; }
+        .requirements-column li:nth-child(3) { transition-delay: 0.2s; }
+        .requirements-column li:nth-child(4) { transition-delay: 0.25s; }
+        .requirements-column li:nth-child(5) { transition-delay: 0.3s; }
+        .requirements-column li:nth-child(6) { transition-delay: 0.35s; }
+        
+        .requirements-content.expanded .requirements-column li {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .requirements-column li strong {
+            color: #a4a4a4;
+        }
+        
+        @media (max-width: 768px) {
+            .requirements-grid {
+                grid-template-columns: 1fr;
+                gap: 0.8rem;
+            }
+            
+            .requirements-content.expanded {
+                max-height: 600px;
+            }
+            
+            .requirements-column:nth-child(2) {
+                transform: translateX(-20px);
+            }
+        }
+        /* Preview side panel and button */
+        .preview-open-button {
+            position: fixed;
+            top: 16px;
+            left: 16px;
+            background: linear-gradient(180deg, #121212 0%, #0f0f0f 100%);
+            color: #a4a4a4;
+            padding: 0.3rem 0.6rem;
+            border: 1px solid #0a0a0a;
+            font-family: 'ProggyClean', 'Courier New', monospace;
+            font-size: 0.7rem;
+            letter-spacing: 0.05em;
+            cursor: default;
+            z-index: 1001;
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.06), inset 0 -1px 0 rgba(0,0,0,0.4), 0 1px 0 rgba(86,113,166,0.15);
+        }
+        .preview-open-button:hover {
+            background: linear-gradient(to bottom, #111111, #0f0f0f);
+            color: #a4a4a4;
+        }
+        
+        .side-preview-panel {
+            position: fixed;
+            top: 72px;
+            right: 40px;
+            width: var(--panel-width);
+            max-height: var(--panel-max-height);
+            background: linear-gradient(180deg, var(--color-elevation-1) 0%, var(--color-elevation-0) 100%);
+            border: 1px solid var(--color-border);
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.035), inset 0 -1px 0 rgba(0,0,0,0.35), 0 8px 16px rgba(0,0,0,0.5);
+            padding: 0.75rem;
+            opacity: 0;
+            transform: translateY(8px);
+            transition: opacity 200ms ease, transform 200ms ease;
+            z-index: 1002;
+            cursor: default;
+            pointer-events: none;
+            will-change: left, top, transform;
+        }
+        /* Centered alignment relative to main window */
+        body.panel-align-center .side-preview-panel {
+            left: calc(var(--container-center-x) - (var(--panel-width) / 2));
+            right: auto;
+        }
+        .side-preview-panel.open {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+        }
+        .side-preview-panel.open.initial-fade {
+            opacity: 0.65;
+        }
+        .side-preview-panel::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 1px;
+            right: 1px;
+            height: 1px;
+            background: #5671a6;
+            pointer-events: none;
+        }
+        .side-preview-panel::after {
+            content: '';
+            position: absolute;
+            top: 1px;
+            left: 1px;
+            right: 1px;
+            height: 1px;
+            background: rgba(86, 113, 166, 0.4);
+            pointer-events: none;
+        }
+        
+        .side-preview-header {
+            background: linear-gradient(180deg, var(--color-elevation-1) 0%, var(--color-elevation-0) 100%);
+            border: 1px solid var(--color-border);
+            border-bottom: 1px solid var(--color-border);
+            padding: 0.5rem 1rem;
+            margin: -0.75rem -0.75rem 0.75rem;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.03);
+        }
+        .side-preview-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 1px;
+            right: 1px;
+            height: 1px;
+            background: var(--color-accent);
+            pointer-events: none;
+        }
+        .side-preview-header::after {
+            content: '';
+            position: absolute;
+            top: 1px;
+            left: 1px;
+            right: 1px;
+            height: 1px;
+            background: var(--color-accent-soft);
+            pointer-events: none;
+        }
+        .side-preview-title { color: var(--color-text); font-size: 0.9rem; font-weight: normal; }
+        
+        .side-preview-close, .side-preview-align-toggle {
+            background: linear-gradient(180deg, var(--color-elevation-1) 0%, var(--color-elevation-0) 100%);
+            color: var(--color-text);
+            padding: 0.3rem 0.6rem;
+            border: 1px solid var(--color-border-soft);
+            font-family: 'ProggyClean', 'Courier New', monospace;
+            font-size: 0.7rem;
+            letter-spacing: 0.05em;
+            cursor: default;
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.06), inset 0 -1px 0 rgba(0,0,0,0.4), 0 1px 0 rgba(86,113,166,0.15);
+            margin-left: 0.5rem;
+        }
+        .side-preview-close:hover, .side-preview-align-toggle:hover {
+            background: linear-gradient(to bottom, #111111, var(--color-elevation-0));
+            color: var(--color-text);
+        }
+        
+        .side-preview-content {
+            padding: 0.8rem;
+            height: auto;
+            max-height: calc(var(--panel-max-height) - 48px);
+            overflow: auto;
+        }
+        
+        @media (max-width: 768px) {
+            .side-preview-panel { width: calc(100vw - 24px); right: 12px; top: 12px; left: auto !important; }
+            .side-preview-header { padding: 0.4rem 0.6rem; margin: -0.75rem -0.75rem 0.6rem; }
+            .side-preview-close { padding: 0.3rem 0.5rem; font-size: 0.65rem; }
+            .side-preview-content { max-height: calc(var(--vh) - 96px); }
+        }
+
+        /* Auto layout when preview is open (right-aligned) */
+        body.layout-preview-open.panel-align-right .container:not(.dragging-main) {
+            transform: translateX(calc(-1 * var(--container-offset)));
+            max-width: min(var(--container-max), calc(var(--vw) - var(--panel-width) - (var(--panel-gap) * 2)));
+        }
+        @media (max-width: 768px) {
+            body.layout-preview-open .container { transform: none; max-width: var(--container-max); }
+        }
+
+        /* Dragging visual distinction */
+        .container.dragging-main {
+            box-shadow: 0 0 0 1px rgba(86,113,166,0.5), 0 0 20px rgba(86,113,166,0.2);
+            transition: none;
+        }
+        .side-preview-panel.dragging-preview {
+            border-color: #5d74a3;
+            box-shadow: 0 0 0 1px rgba(86,113,166,0.5), 0 0 20px rgba(86,113,166,0.25), inset 0 1px 0 rgba(255,255,255,0.04);
+            z-index: 1004;
+            transition: none;
+        }
+        .side-preview-header { cursor: move; }
+    </style>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.158.0/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.158.0/examples/js/loaders/MTLLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.158.0/examples/js/loaders/OBJLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.158.0/examples/js/controls/OrbitControls.js"></script>
+    <script>
+        // Wait for DOM to be fully loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            let isDragging = false;
+            let dragOffset = { x: 0, y: 0 };
+            let currentTransform = { x: 0, y: 0 };
+            let startRect = null;
+            let startMouse = { x: 0, y: 0 };
+            const container = document.querySelector('.container');
+            const titleBar = document.querySelector('.title-bar');
+            const previewPanel = document.getElementById('sidePreviewPanel');
+            const previewHeader = previewPanel ? previewPanel.querySelector('.side-preview-header') : null;
+            const MIN_GAP = 16; // minimum separation distance in pixels
+            let otherRectMainDrag = null;
+            let otherRectPreviewDrag = null;
+
+            // Responsive viewport variables update
+            function updateViewportVars() {
+                const vw = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+                const vh = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+                document.documentElement.style.setProperty('--vw', vw + 'px');
+                document.documentElement.style.setProperty('--vh', vh + 'px');
+                const scaleBaseW = 1280, scaleBaseH = 800;
+                const scale = Math.min(vw / scaleBaseW, vh / scaleBaseH);
+                const clamped = Math.max(0.85, Math.min(1.15, scale));
+                document.documentElement.style.setProperty('--scale', clamped.toFixed(4));
+            }
+            updateViewportVars();
+            window.addEventListener('resize', () => {
+                updateViewportVars();
+                resizeModelPreview();
+            });
+            window.addEventListener('orientationchange', () => {
+                setTimeout(() => { updateViewportVars(); resizeModelPreview(); }, 50);
+            });
+            document.addEventListener('visibilitychange', () => {
+                if (!document.hidden) {
+                    setTimeout(() => { updateViewportVars(); resizeModelPreview(); }, 50);
+                }
+            });
+
+            function clampSeparation(baseRect, otherRect, deltaX, deltaY) {
+                const EPS = 0.75;
+                let newLeft = baseRect.left + deltaX;
+                let newTop = baseRect.top + deltaY;
+                const newRect = {
+                    left: newLeft,
+                    right: newLeft + baseRect.width,
+                    top: newTop,
+                    bottom: newTop + baseRect.height,
+                    width: baseRect.width,
+                    height: baseRect.height
+                };
+                const otherHasBounds = isFinite(otherRect.left) && isFinite(otherRect.right) && isFinite(otherRect.top) && isFinite(otherRect.bottom);
+                if (otherHasBounds) {
+                    const verticalOverlapZoneTop = otherRect.top - MIN_GAP - EPS;
+                    const verticalOverlapZoneBottom = otherRect.bottom + MIN_GAP + EPS;
+                    const horizontalOverlapZoneLeft = otherRect.left - MIN_GAP - EPS;
+                    const horizontalOverlapZoneRight = otherRect.right + MIN_GAP + EPS;
+
+                    const verticalNear = newRect.top < verticalOverlapZoneBottom && newRect.bottom > verticalOverlapZoneTop;
+                    const horizontalNear = newRect.left < horizontalOverlapZoneRight && newRect.right > horizontalOverlapZoneLeft;
+
+                    if (verticalNear) {
+                        if (deltaX > 0 && newRect.right > horizontalOverlapZoneLeft) {
+                            newLeft = otherRect.left - MIN_GAP - baseRect.width;
+                        } else if (deltaX < 0 && newRect.left < horizontalOverlapZoneRight) {
+                            newLeft = otherRect.right + MIN_GAP;
+                        }
+                    }
+                    if (horizontalNear) {
+                        if (deltaY > 0 && newRect.bottom > verticalOverlapZoneTop) {
+                            newTop = otherRect.top - MIN_GAP - baseRect.height;
+                        } else if (deltaY < 0 && newRect.top < verticalOverlapZoneBottom) {
+                            newTop = otherRect.bottom + MIN_GAP;
+                        }
+                    }
+                }
+                newLeft = Math.max(0, Math.min(newLeft, window.innerWidth - baseRect.width));
+                newTop = Math.max(0, Math.min(newTop, window.innerHeight - baseRect.height));
+                return { left: newLeft, top: newTop };
+            }
+
+            // Check if elements exist
+            if (!container || !titleBar) {
+                console.error('Container or title bar not found');
+                return;
+            }
+
+            // Mouse events for dragging
+            titleBar.addEventListener('mousedown', (e) => {
+                isDragging = true;
+                startRect = container.getBoundingClientRect();
+                startMouse.x = e.clientX;
+                startMouse.y = e.clientY;
+                container.classList.add('dragging-main');
+                // Cache preview rect only if panel is open to avoid initial restriction
+                otherRectMainDrag = (previewPanel && previewPanel.classList.contains('open'))
+                    ? previewPanel.getBoundingClientRect()
+                    : null;
+                e.preventDefault();
+            });
+
+            document.addEventListener('mousemove', (e) => {
+                if (!isDragging) return;
+                const deltaX = e.clientX - startMouse.x;
+                const deltaY = e.clientY - startMouse.y;
+
+                const otherRect = otherRectMainDrag
+                    ? otherRectMainDrag
+                    : { left: Infinity, right: -Infinity, top: Infinity, bottom: -Infinity, width: 0, height: 0 };
+
+                const clamped = clampSeparation(startRect, otherRect, deltaX, deltaY);
+                currentTransform.x = clamped.left - startRect.left;
+                currentTransform.y = clamped.top - startRect.top;
+                container.style.transform = `translate(${currentTransform.x}px, ${currentTransform.y}px)`;
+            });
+
+            document.addEventListener('mouseup', () => {
+                if (!isDragging) return;
+                
+                isDragging = false;
+                otherRectMainDrag = null;
+                container.classList.remove('dragging-main');
+                
+                // Smooth return to baseline
+                currentTransform.x = 0;
+                currentTransform.y = 0;
+                if (document.body.classList.contains('layout-preview-open')) {
+                    container.style.transform = '';
+                } else {
+                    container.style.transform = 'translate(0px, 0px)';
+                }
+            });
+
+            // Touch events for mobile
+            titleBar.addEventListener('touchstart', (e) => {
+                isDragging = true;
+                const touch = e.touches[0];
+                startRect = container.getBoundingClientRect();
+                startMouse.x = touch.clientX;
+                startMouse.y = touch.clientY;
+                container.classList.add('dragging-main');
+                // Cache preview rect only if panel is open (prevents initial restriction)
+                otherRectMainDrag = (previewPanel && previewPanel.classList.contains('open'))
+                    ? previewPanel.getBoundingClientRect()
+                    : null;
+                e.preventDefault();
+            });
+
+            document.addEventListener('touchmove', (e) => {
+                if (!isDragging) return;
+                
+                const touch = e.touches[0];
+                const deltaX = touch.clientX - startMouse.x;
+                const deltaY = touch.clientY - startMouse.y;
+                const otherRect = otherRectMainDrag
+                    ? otherRectMainDrag
+                    : { left: Infinity, right: -Infinity, top: Infinity, bottom: -Infinity, width: 0, height: 0 };
+                
+                const clamped = clampSeparation(startRect, otherRect, deltaX, deltaY);
+                currentTransform.x = clamped.left - startRect.left;
+                currentTransform.y = clamped.top - startRect.top;
+                
+                container.style.transform = `translate(${currentTransform.x}px, ${currentTransform.y}px)`;
+                e.preventDefault();
+            });
+
+            document.addEventListener('touchend', () => {
+                if (!isDragging) return;
+                
+                isDragging = false;
+                otherRectMainDrag = null;
+                container.classList.remove('dragging-main');
+                
+                // Smooth return to baseline
+                currentTransform.x = 0;
+                currentTransform.y = 0;
+                if (document.body.classList.contains('layout-preview-open')) {
+                    container.style.transform = '';
+                } else {
+                    container.style.transform = 'translate(0px, 0px)';
+                }
+            });
+
+            // --- Preview panel dragging ---
+            let isDraggingPreview = false;
+            let previewStartRect = null;
+            let previewStartMouse = { x: 0, y: 0 };
+            if (previewPanel && previewHeader) {
+                // Mouse
+                previewHeader.addEventListener('mousedown', (e) => {
+                    if (!previewPanel.classList.contains('open')) return; // only draggable when open
+                    isDraggingPreview = true;
+                    previewStartRect = previewPanel.getBoundingClientRect();
+                    previewStartMouse.x = e.clientX;
+                    previewStartMouse.y = e.clientY;
+                    previewPanel.classList.add('dragging-preview');
+                    previewPanel.classList.remove('initial-fade');
+                    previewPanel.style.left = previewStartRect.left + 'px';
+                    previewPanel.style.top = previewStartRect.top + 'px';
+                    previewPanel.style.right = 'auto';
+                    // Cache container bounds once; it stays static while preview is dragged
+                    otherRectPreviewDrag = container ? container.getBoundingClientRect() : null;
+                    e.preventDefault();
+                });
+                document.addEventListener('mousemove', (e) => {
+                    if (!isDraggingPreview) return;
+                    const deltaX = e.clientX - previewStartMouse.x;
+                    const deltaY = e.clientY - previewStartMouse.y;
+                    const newLeft = previewStartRect.left + deltaX;
+                    const newTop = previewStartRect.top + deltaY;
+                    previewPanel.style.left = newLeft + 'px';
+                    previewPanel.style.top = newTop + 'px';
+                    previewPanel.style.right = 'auto';
+                });
+                document.addEventListener('mouseup', () => {
+                    if (!isDraggingPreview) return;
+                    isDraggingPreview = false;
+                    otherRectPreviewDrag = null;
+                    previewPanel.classList.remove('dragging-preview');
+                    // Preserve user-placed position; ensure fixed anchoring
+                    previewPanel.style.right = 'auto';
+                });
+
+                // Touch
+                previewHeader.addEventListener('touchstart', (e) => {
+                    if (!previewPanel.classList.contains('open')) return;
+                    const touch = e.touches[0];
+                    isDraggingPreview = true;
+                    previewStartRect = previewPanel.getBoundingClientRect();
+                    previewStartMouse.x = touch.clientX;
+                    previewStartMouse.y = touch.clientY;
+                    previewPanel.classList.add('dragging-preview');
+                    previewPanel.classList.remove('initial-fade');
+                    previewPanel.style.left = previewStartRect.left + 'px';
+                    previewPanel.style.top = previewStartRect.top + 'px';
+                    previewPanel.style.right = 'auto';
+                    // Cache container bounds once; static during preview drag
+                    otherRectPreviewDrag = container ? container.getBoundingClientRect() : null;
+                    e.preventDefault();
+                });
+                document.addEventListener('touchmove', (e) => {
+                    if (!isDraggingPreview) return;
+                    const touch = e.touches[0];
+                    const deltaX = touch.clientX - previewStartMouse.x;
+                    const deltaY = touch.clientY - previewStartMouse.y;
+                    const newLeft = previewStartRect.left + deltaX;
+                    const newTop = previewStartRect.top + deltaY;
+                    previewPanel.style.left = newLeft + 'px';
+                    previewPanel.style.top = newTop + 'px';
+                    previewPanel.style.right = 'auto';
+                    e.preventDefault();
+                });
+                document.addEventListener('touchend', () => {
+                    if (!isDraggingPreview) return;
+                    isDraggingPreview = false;
+                    otherRectPreviewDrag = null;
+                    previewPanel.classList.remove('dragging-preview');
+                    // Preserve user-placed position; ensure fixed anchoring
+                    previewPanel.style.right = 'auto';
+                }, { passive: true });
+            }
+            
+            // Interactive underline for main title
+            (function() {
+                const title = document.getElementById('brandTitle');
+                if (!title) return;
+                const titleTextEl = title.querySelector('.title-text');
+                const underline = title.querySelector('.cursor-underline');
+                if (!titleTextEl || !underline) return;
+                
+                const raw = titleTextEl.textContent || '';
+                titleTextEl.innerHTML = '';
+                const chars = [];
+                for (let i = 0; i < raw.length; i++) {
+                    const span = document.createElement('span');
+                    span.className = 'title-char';
+                    span.textContent = raw[i];
+                    titleTextEl.appendChild(span);
+                    chars.push(span);
+                }
+                
+                let rects = [];
+                let containerRect = null;
+                const computeRects = () => {
+                    containerRect = titleTextEl.getBoundingClientRect();
+                    rects = chars.map(ch => ch.getBoundingClientRect());
+                };
+                
+                const nearestCharIndex = (clientX) => {
+                    let nearest = 0;
+                    let min = Infinity;
+                    for (let i = 0; i < rects.length; i++) {
+                        const r = rects[i];
+                        const cx = (r.left + r.right) / 2;
+                        const d = Math.abs(cx - clientX);
+                        if (d < min) { min = d; nearest = i; }
+                    }
+                    return nearest;
+                };
+                
+                let rafPending = false;
+                
+                const moveUnderline = (index) => {
+                    const r = rects[index];
+                    if (!r || !containerRect) return;
+                    underline.style.left = (r.left - containerRect.left) + 'px';
+                    underline.style.width = r.width + 'px';
+                };
+                
+                const onMove = (clientX) => {
+                    if (rafPending) return;
+                    rafPending = true;
+                    requestAnimationFrame(() => {
+                        rafPending = false;
+                        computeRects();
+                        const idx = nearestCharIndex(clientX);
+                        underline.style.opacity = '1';
+                        moveUnderline(idx);
+                    });
+                };
+                
+                title.addEventListener('mouseenter', (e) => {
+                    computeRects();
+                    underline.style.opacity = '1';
+                    onMove(e.clientX);
+                });
+                
+                title.addEventListener('mousemove', (e) => {
+                    onMove(e.clientX);
+                });
+                
+                title.addEventListener('mouseleave', () => {
+                    underline.style.opacity = '0';
+                });
+                
+                // Touch support
+                title.addEventListener('touchstart', (e) => {
+                    computeRects();
+                    const t = e.touches[0];
+                    underline.style.opacity = '1';
+                    onMove(t.clientX);
+                }, { passive: true });
+                
+                title.addEventListener('touchmove', (e) => {
+                    const t = e.touches[0];
+                    onMove(t.clientX);
+                }, { passive: true });
+                
+                title.addEventListener('touchend', () => {
+                    underline.style.opacity = '0';
+                });
+                
+                window.addEventListener('resize', computeRects);
+            })();
+        });
+        
+        function toggleMute() {
+            const video = document.getElementById('previewVideo');
+            const button = document.getElementById('muteButton');
+            
+            if (video.muted) {
+                video.muted = false;
+                button.textContent = 'mute';
+            } else {
+                video.muted = true;
+                button.textContent = 'unmute';
+            }
+        }
+        
+        function toggleRequirements() {
+            const content = document.getElementById('requirementsContent');
+            const arrow = document.getElementById('requirementsArrow');
+            const text = document.getElementById('requirementsText');
+            
+            if (content.classList.contains('expanded')) {
+                content.classList.remove('expanded');
+                arrow.textContent = '▼';
+                text.textContent = 'System Requirements';
+            } else {
+                content.classList.add('expanded');
+                arrow.textContent = '▲';
+                text.textContent = 'Hide Requirements';
+            }
+        }
+        
+        // Modal Functions
+        let modalTimeouts = {};
+        
+        function showDownloadModal() {
+            const modal = document.getElementById('downloadModal');
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+            
+            // Clear any existing timeout for this modal
+            if (modalTimeouts['downloadModal']) {
+                clearTimeout(modalTimeouts['downloadModal']);
+            }
+            
+            // Auto-close after 10 seconds
+            modalTimeouts['downloadModal'] = setTimeout(() => {
+                closeModal('downloadModal');
+            }, 10000);
+        }
+        
+        function showKeyModal() {
+            const modal = document.getElementById('keyModal');
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+            
+            // Clear any existing timeout for this modal
+            if (modalTimeouts['keyModal']) {
+                clearTimeout(modalTimeouts['keyModal']);
+            }
+            
+            // Auto-close after 10 seconds
+            modalTimeouts['keyModal'] = setTimeout(() => {
+                closeModal('keyModal');
+            }, 10000);
+        }
+        
+        function closeModal(modalId) {
+            const modal = document.getElementById(modalId);
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto'; // Restore scrolling
+            
+            // Clear the timeout when manually closing
+            if (modalTimeouts[modalId]) {
+                clearTimeout(modalTimeouts[modalId]);
+                delete modalTimeouts[modalId];
+            }
+        }
+        
+        // Close modal when clicking outside
+        function setupModalClickOutside() {
+            const modals = document.querySelectorAll('.modal-overlay');
+            modals.forEach(modal => {
+                modal.addEventListener('click', (e) => {
+                    if (e.target === modal) {
+                        closeModal(modal.id);
+                    }
+                });
+            });
+        }
+        
+        // Close modal with Escape key
+        function setupModalEscapeKey() {
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') {
+                    const activeModal = document.querySelector('.modal-overlay.active');
+                    if (activeModal) {
+                        closeModal(activeModal.id);
+                    }
+                }
+            });
+        }
+        
+        // Custom Video Controls
+        let isDraggingTimeline = false;
+        let isDraggingVolume = false;
+        
+        function togglePlayPause() {
+            const video = document.getElementById('previewVideo');
+            const button = document.getElementById('playPauseBtn');
+            
+            if (video.paused) {
+                video.play();
+                button.textContent = 'pause';
+            } else {
+                video.pause();
+                button.textContent = 'play';
+            }
+        }
+        
+        function toggleVolume() {
+            const video = document.getElementById('previewVideo');
+            const button = document.getElementById('volumeBtn');
+            
+            if (video.volume === 0) {
+                video.volume = 1;
+                button.textContent = 'volume';
+                updateVolumeSlider(1);
+            } else {
+                video.volume = 0;
+                button.textContent = 'mute';
+                updateVolumeSlider(0);
+            }
+        }
+        
+        function toggleFullscreen() {
+            const video = document.getElementById('previewVideo');
+            const videoContainer = document.querySelector('.video-container');
+            
+            if (!document.fullscreenElement) {
+                if (videoContainer.requestFullscreen) {
+                    videoContainer.requestFullscreen();
+                }
+            } else {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                }
+            }
+        }
+        
+        function formatTime(seconds) {
+            const mins = Math.floor(seconds / 60);
+            const secs = Math.floor(seconds % 60);
+            return `${mins}:${secs.toString().padStart(2, '0')}`;
+        }
+        
+        function updateTimeDisplay() {
+            const video = document.getElementById('previewVideo');
+            const currentTimeEl = document.getElementById('currentTime');
+            const totalTimeEl = document.getElementById('totalTime');
+            
+            if (video.duration && !isNaN(video.duration)) {
+                currentTimeEl.textContent = formatTime(video.currentTime);
+                totalTimeEl.textContent = formatTime(video.duration);
+            }
+        }
+        
+        function updateTimelineSlider() {
+            const video = document.getElementById('previewVideo');
+            const progress = document.getElementById('timelineProgress');
+            const thumb = document.getElementById('timelineThumb');
+            const track = document.getElementById('timelineTrack');
+            
+            if (video.duration && !isNaN(video.duration)) {
+                const percentage = (video.currentTime / video.duration) * 100;
+                progress.style.width = percentage + '%';
+                
+                const trackWidth = track.offsetWidth - 12; // Account for thumb width
+                const thumbPosition = Math.max(0, Math.min(trackWidth, (percentage / 100) * trackWidth));
+                thumb.style.left = thumbPosition + 'px';
+            }
+        }
+        
+        function updateVolumeSlider(volume) {
+            const progress = document.getElementById('volumeProgress');
+            const thumb = document.getElementById('volumeThumb');
+            const track = document.getElementById('volumeTrack');
+            
+            const percentage = volume * 100;
+            progress.style.width = percentage + '%';
+            
+            const trackWidth = track.offsetWidth - 12; // Account for thumb width
+            const thumbPosition = Math.max(0, Math.min(trackWidth, (percentage / 100) * trackWidth));
+            thumb.style.right = (trackWidth - thumbPosition) + 'px';
+        }
+        
+        // Timeline slider interaction (inspired by slider.cpp behavior)
+        function setupTimelineSlider() {
+            const track = document.getElementById('timelineTrack');
+            const video = document.getElementById('previewVideo');
+            
+            track.addEventListener('mousedown', (e) => {
+                isDraggingTimeline = true;
+                const rect = track.getBoundingClientRect();
+                const clickX = e.clientX - rect.left - 6; // Account for track margin
+                const trackWidth = rect.width - 12; // Account for margins
+                const percentage = Math.max(0, Math.min(1, clickX / trackWidth));
+                
+                if (video.duration && !isNaN(video.duration)) {
+                    video.currentTime = percentage * video.duration;
+                }
+                
+                e.preventDefault();
+            });
+            
+            document.addEventListener('mousemove', (e) => {
+                if (!isDraggingTimeline) return;
+                
+                const rect = track.getBoundingClientRect();
+                const clickX = e.clientX - rect.left - 6; // Account for track margin
+                const trackWidth = rect.width - 12; // Account for margins
+                const percentage = Math.max(0, Math.min(1, clickX / trackWidth));
+                
+                if (video.duration && !isNaN(video.duration)) {
+                    video.currentTime = percentage * video.duration;
+                }
+            });
+            
+            document.addEventListener('mouseup', () => {
+                isDraggingTimeline = false;
+            });
+        }
+        
+        // Volume slider interaction
+        function setupVolumeSlider() {
+            const track = document.getElementById('volumeTrack');
+            const video = document.getElementById('previewVideo');
+            
+            track.addEventListener('mousedown', (e) => {
+                isDraggingVolume = true;
+                const rect = track.getBoundingClientRect();
+                const clickX = e.clientX - rect.left;
+                const trackWidth = rect.width - 12; // Account for thumb width
+                const percentage = Math.max(0, Math.min(1, clickX / trackWidth));
+                
+                video.volume = percentage;
+                updateVolumeSlider(percentage);
+                
+                e.preventDefault();
+            });
+            
+            document.addEventListener('mousemove', (e) => {
+                if (!isDraggingVolume) return;
+                
+                const rect = track.getBoundingClientRect();
+                const clickX = e.clientX - rect.left;
+                const trackWidth = rect.width - 12; // Account for thumb width
+                const percentage = Math.max(0, Math.min(1, clickX / trackWidth));
+                
+                video.volume = percentage;
+                updateVolumeSlider(percentage);
+            });
+            
+            document.addEventListener('mouseup', () => {
+                isDraggingVolume = false;
+            });
+        }
+        
+        // Initialize video controls
+        function initializeVideoControls() {
+            const video = document.getElementById('previewVideo');
+            
+            // Set initial volume
+            video.volume = 0.5;
+            updateVolumeSlider(0.5);
+            
+            // Setup event listeners
+            video.addEventListener('timeupdate', () => {
+                if (!isDraggingTimeline) {
+                    updateTimeDisplay();
+                    updateTimelineSlider();
+                }
+            });
+            
+            video.addEventListener('loadedmetadata', () => {
+                updateTimeDisplay();
+                updateTimelineSlider();
+            });
+            
+            video.addEventListener('play', () => {
+                document.getElementById('playPauseBtn').textContent = 'pause';
+            });
+            
+            video.addEventListener('pause', () => {
+                document.getElementById('playPauseBtn').textContent = 'play';
+            });
+            
+            video.addEventListener('volumechange', () => {
+                const volumeBtn = document.getElementById('volumeBtn');
+                if (video.volume === 0) {
+                    volumeBtn.textContent = 'mute';
+                } else {
+                    volumeBtn.textContent = 'volume';
+                }
+                updateVolumeSlider(video.volume);
+            });
+            
+            // Setup sliders
+            setupTimelineSlider();
+            setupVolumeSlider();
+        }
+        
+        // Snowflake Animation System
+        function createSnowflake() {
+            const snowflake = document.createElement('div');
+            snowflake.className = 'snowflake';
+            
+            // Random horizontal position
+            const x = Math.random() * window.innerWidth;
+            snowflake.style.left = x + 'px';
+            
+            // Random animation duration (2-6 seconds) - faster to prevent sticking
+            const duration = 2 + Math.random() * 4;
+            snowflake.style.animationDuration = duration + 's';
+            
+            // Random delay to stagger spawning
+            const delay = Math.random() * 1; // Reduced delay
+            snowflake.style.animationDelay = delay + 's';
+            
+            // Random size variation
+            const size = 8 + Math.random() * 8; // 8px to 16px
+            snowflake.style.fontSize = size + 'px';
+            
+            // Random opacity variation
+            const opacity = 0.3 + Math.random() * 0.4; // 0.3 to 0.7
+            snowflake.style.opacity = opacity;
+            
+            document.body.appendChild(snowflake);
+            
+            // Remove snowflake after animation completes with buffer time
+            const totalTime = (duration + delay + 1) * 1000; // Add 1 second buffer
+            setTimeout(() => {
+                if (snowflake && snowflake.parentNode) {
+                    snowflake.parentNode.removeChild(snowflake);
+                }
+            }, totalTime);
+        }
+        
+        function startSnowfall() {
+            // Create initial snowflakes - increased amount
+            for (let i = 0; i < 25; i++) {
+                setTimeout(createSnowflake, i * 100); // Faster initial spawning
+            }
+            
+            // Continue creating snowflakes at random intervals
+            function spawnSnowflake() {
+                createSnowflake();
+                // Random interval between 100ms and 400ms - more frequent
+                const nextSpawn = 100 + Math.random() * 300;
+                setTimeout(spawnSnowflake, nextSpawn);
+            }
+            
+            // Start the continuous spawning after initial batch
+            setTimeout(spawnSnowflake, 2000); // Start sooner
+        }
+        
+        // Page Load Animations
+        function startPageAnimations() {
+            const container = document.querySelector('.container');
+            const titleBar = document.querySelector('.title-bar');
+            const h1 = document.querySelector('h1');
+            const subtitle = document.querySelector('.subtitle');
+            const previewSection = document.querySelector('.preview-section');
+            const buttonGroup = document.querySelector('.button-group');
+            const version = document.querySelector('.version');
+            const status = document.querySelector('.status');
+            const footer = document.querySelector('.footer');
+            const requirementsSection = document.querySelector('.requirements-section');
+            
+            // Start animations with slight delay
+            setTimeout(() => {
+                if (container) container.classList.add('loaded');
+            }, 100);
+            
+            setTimeout(() => {
+                if (titleBar) titleBar.classList.add('loaded');
+            }, 200);
+            
+            setTimeout(() => {
+                if (h1) h1.classList.add('loaded');
+            }, 400);
+            
+            setTimeout(() => {
+                if (subtitle) subtitle.classList.add('loaded');
+            }, 600);
+            
+            setTimeout(() => {
+                if (previewSection) previewSection.classList.add('loaded');
+            }, 800);
+            
+            setTimeout(() => {
+                if (buttonGroup) buttonGroup.classList.add('loaded');
+            }, 1200);
+            
+            setTimeout(() => {
+                if (version) version.classList.add('loaded');
+                if (status) status.classList.add('loaded');
+            }, 1600);
+            
+            setTimeout(() => {
+                if (footer) footer.classList.add('loaded');
+            }, 1800);
+            
+            setTimeout(() => {
+                if (requirementsSection) requirementsSection.classList.add('loaded');
+            }, 2000);
+        }
+        
+        // Video loading optimization
+        document.addEventListener('DOMContentLoaded', function() {
+            const video = document.getElementById('previewVideo');
+            const loadingOverlay = document.getElementById('loadingOverlay');
+            const muteButton = document.getElementById('muteButton');
+            
+            // Hide mute button initially
+            muteButton.style.display = 'none';
+            
+            // Function to hide loading overlay
+            function hideLoadingOverlay() {
+                loadingOverlay.classList.add('hidden');
+                muteButton.style.display = 'block';
+            }
+            
+            // Check if video is already loaded
+            if (video.readyState >= 3) { // HAVE_FUTURE_DATA or higher
+                hideLoadingOverlay();
+            }
+            
+            // Show loading progress
+            video.addEventListener('loadstart', function() {
+                loadingOverlay.textContent = 'Loading preview...';
+                loadingOverlay.classList.remove('hidden');
+                muteButton.style.display = 'none';
+            });
+            
+            video.addEventListener('progress', function() {
+                if (video.buffered.length > 0) {
+                    const bufferedEnd = video.buffered.end(video.buffered.length - 1);
+                    const duration = video.duration;
+                    if (duration > 0) {
+                        const percent = Math.round((bufferedEnd / duration) * 100);
+                        loadingOverlay.textContent = `Loading preview... ${percent}%`;
+                    }
+                }
+            });
+            
+            // Multiple events to ensure loading overlay is hidden
+            video.addEventListener('canplay', hideLoadingOverlay);
+            video.addEventListener('canplaythrough', hideLoadingOverlay);
+            video.addEventListener('loadeddata', function() {
+                // Hide after a short delay to ensure smooth transition
+                setTimeout(hideLoadingOverlay, 100);
+            });
+            
+            video.addEventListener('error', function() {
+                loadingOverlay.textContent = 'Failed to load preview';
+                loadingOverlay.style.color = '#ff6b6b';
+            });
+            
+            // Optimize for mobile/slow connections
+            if (navigator.connection && navigator.connection.effectiveType) {
+                const connectionType = navigator.connection.effectiveType;
+                if (connectionType === 'slow-2g' || connectionType === '2g') {
+                    video.preload = 'none';
+                    loadingOverlay.textContent = 'Tap to load preview';
+                    loadingOverlay.addEventListener('click', function() {
+                        video.preload = 'metadata';
+                        video.load();
+                    });
+                }
+            }
+            
+            // Initialize custom video controls
+            initializeVideoControls();
+            
+            // Start snowfall animation
+            startSnowfall();
+            
+            // Initialize modal functionality
+            setupModalClickOutside();
+            setupModalEscapeKey();
+            
+            // Start page animations
+            startPageAnimations();
+        });
+
+        // 3D Model Preview: setup and lifecycle
+        let modelPreview = { initialized: false, scene: null, camera: null, renderer: null, controls: null, animationId: null };
+        function initModelPreview() {
+            if (modelPreview.initialized) return;
+            const container = document.getElementById('modelPreviewArea');
+            if (!container) return;
+            container.innerHTML = '';
+
+            const width = container.clientWidth || 300;
+            const height = container.clientHeight || Math.max(260, Math.round(width * 0.6));
+
+            const scene = new THREE.Scene();
+            scene.background = new THREE.Color(0x101010);
+
+            const camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 1000);
+            camera.position.set(3, 2, 4);
+
+            const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: false });
+            renderer.setSize(width, height);
+            renderer.setPixelRatio(window.devicePixelRatio || 1);
+            // Ensure proper color space for textures/materials across Three.js versions
+            if (renderer.outputEncoding !== undefined && THREE && THREE.sRGBEncoding) {
+                renderer.outputEncoding = THREE.sRGBEncoding;
+            } else if (THREE && THREE.SRGBColorSpace) {
+                renderer.outputColorSpace = THREE.SRGBColorSpace;
+            }
+            container.appendChild(renderer.domElement);
+            renderer.domElement.style.width = '100%';
+            renderer.domElement.style.height = height + 'px';
+            renderer.domElement.style.border = '1px solid #2c2c2c';
+            renderer.domElement.style.background = '#111';
+
+            const controls = new THREE.OrbitControls(camera, renderer.domElement);
+            controls.enableDamping = true;
+            controls.dampingFactor = 0.06;
+
+            // Lighting
+            scene.add(new THREE.AmbientLight(0xffffff, 0.4));
+            const dir1 = new THREE.DirectionalLight(0xffffff, 0.8);
+            dir1.position.set(5, 10, 7);
+            scene.add(dir1);
+            const dir2 = new THREE.DirectionalLight(0xffffff, 0.35);
+            dir2.position.set(-5, -3, -7);
+            scene.add(dir2);
+
+            // Loading overlay
+            const loading = document.createElement('div');
+            loading.className = 'loading-overlay';
+            loading.textContent = 'Loading 3D model...';
+            container.appendChild(loading);
+
+            const panel = document.getElementById('sidePreviewPanel');
+            let objUrl = panel?.getAttribute('data-obj-url') || 'images/avatar.obj';
+            const mtlUrl = panel?.getAttribute('data-mtl-url') || '';
+
+            const manager = new THREE.LoadingManager();
+            manager.onLoad = () => { try { loading.remove(); } catch (e) {} };
+            manager.onError = (url) => {
+                loading.textContent = 'Failed to load assets';
+                loading.style.color = '#ff6b6b';
+                console.error('Three.js loading error:', url);
+            };
+
+            const objLoader = new THREE.OBJLoader(manager);
+
+            const finalizeObject = (object) => {
+                const box = new THREE.Box3().setFromObject(object);
+                const size = box.getSize(new THREE.Vector3());
+                const center = box.getCenter(new THREE.Vector3());
+                object.position.sub(center);
+                const maxDim = Math.max(size.x, size.y, size.z);
+                const targetSize = 2.0;
+                const scale = maxDim > 0 ? targetSize / maxDim : 1;
+                object.scale.setScalar(scale);
+                scene.add(object);
+                controls.target.set(0, 0, 0);
+                controls.update();
+            };
+
+            const loadObj = (materials) => {
+                if (materials) objLoader.setMaterials(materials);
+                objLoader.load(
+                    objUrl,
+                    (object) => { finalizeObject(object); },
+                    undefined,
+                    (err) => {
+                        console.error('OBJ load error', err);
+                        // Fallback to local sample if remote fails
+                        if (objUrl !== 'images/avatar.obj') {
+                            objUrl = 'images/avatar.obj';
+                            objLoader.load(objUrl, (object) => { finalizeObject(object); }, undefined, (e2) => {
+                                loading.textContent = 'Failed to load model';
+                                loading.style.color = '#ff6b6b';
+                            });
+                        } else {
+                            loading.textContent = 'Failed to load model';
+                            loading.style.color = '#ff6b6b';
+                        }
+                    }
+                );
+            };
+
+            if (mtlUrl) {
+                const mtlLoader = new THREE.MTLLoader(manager);
+                mtlLoader.setCrossOrigin('anonymous');
+                mtlLoader.setMaterialOptions({ ignoreZeroRGBs: true, side: THREE.DoubleSide });
+                mtlLoader.load(
+                    mtlUrl,
+                    (materials) => { try { materials.preload(); } catch(e) {}; loadObj(materials); },
+                    undefined,
+                    (err) => {
+                        console.warn('MTL load failed, continuing without materials', err);
+                        loading.textContent = 'Loading model (materials unavailable)...';
+                        loadObj(null);
+                    }
+                );
+            } else {
+                loadObj(null);
+            }
+
+            modelPreview = { initialized: true, scene, camera, renderer, controls, animationId: null };
+            window.addEventListener('resize', resizeModelPreview);
+            animateModelPreview();
+        }
+        function animateModelPreview() {
+            if (!modelPreview.initialized) return;
+            modelPreview.animationId = requestAnimationFrame(animateModelPreview);
+            modelPreview.controls && modelPreview.controls.update && modelPreview.controls.update();
+            modelPreview.renderer.render(modelPreview.scene, modelPreview.camera);
+        }
+        function resizeModelPreview() {
+            if (!modelPreview.initialized) return;
+            const container = document.getElementById('modelPreviewArea');
+            const width = container.clientWidth || 300;
+            const height = container.clientHeight || Math.max(260, Math.round(width * 0.6));
+            modelPreview.camera.aspect = width / height;
+            modelPreview.camera.updateProjectionMatrix();
+            modelPreview.renderer.setSize(width, height);
+            modelPreview.renderer.domElement.style.height = height + 'px';
+        }
+        function disposeModelPreview() {
+            if (!modelPreview.initialized) return;
+            cancelAnimationFrame(modelPreview.animationId);
+            modelPreview.controls && modelPreview.controls.dispose && modelPreview.controls.dispose();
+            modelPreview.renderer.dispose();
+            modelPreview.scene.traverse((child) => {
+                if (child.isMesh) {
+                    child.geometry && child.geometry.dispose && child.geometry.dispose();
+                    if (Array.isArray(child.material)) {
+                        child.material.forEach((m) => m && m.dispose && m.dispose());
+                    } else if (child.material) {
+                        child.material.dispose && child.material.dispose();
+                    }
+                }
+            });
+            const container = document.getElementById('modelPreviewArea');
+            if (container) container.innerHTML = '';
+            window.removeEventListener('resize', resizeModelPreview);
+            modelPreview.initialized = false;
+        }
+
+        // Side Preview toggle with Escape-to-close
+        function updatePreviewAlignmentVars() {
+            if (!document.body.classList.contains('panel-align-center')) return;
+            const main = document.querySelector('.container');
+            if (!main) return;
+            const rect = main.getBoundingClientRect();
+            const centerX = rect.left + rect.width / 2;
+            document.documentElement.style.setProperty('--container-center-x', centerX + 'px');
+        }
+
+        function togglePreviewAlignment() {
+            const body = document.body;
+            const panel = document.getElementById('sidePreviewPanel');
+            const main = document.querySelector('.container');
+            const alignBtn = document.querySelector('.side-preview-align-toggle');
+            let isCenter = body.classList.contains('panel-align-center');
+            if (isCenter) {
+                body.classList.remove('panel-align-center');
+                body.classList.add('panel-align-right');
+                isCenter = false;
+            } else {
+                body.classList.add('panel-align-center');
+                body.classList.remove('panel-align-right');
+                isCenter = true;
+            }
+            if (panel && panel.classList.contains('open')) {
+                updatePreviewAlignmentVars();
+                if (main && !main.classList.contains('dragging-main')) {
+                    main.style.transform = '';
+                }
+            }
+            if (alignBtn) {
+                alignBtn.textContent = isCenter ? 'Align: Center' : 'Align: Right';
+                alignBtn.setAttribute('aria-pressed', isCenter ? 'true' : 'false');
+            }
+        }
+
+        function toggleSidePreview() {
+            const panel = document.getElementById('sidePreviewPanel');
+            const btn = document.querySelector('.preview-open-button');
+            const main = document.querySelector('.container');
+            const isOpen = panel.classList.toggle('open');
+            if (btn) btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+            panel.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
+            document.body.classList.toggle('layout-preview-open', isOpen);
+
+            // Default alignment to right when opening if none chosen
+            if (isOpen) {
+                const body = document.body;
+                if (!body.classList.contains('panel-align-center') && !body.classList.contains('panel-align-right')) {
+                    body.classList.add('panel-align-right');
+                }
+                updatePreviewAlignmentVars();
+
+                // Initial launch: place adjacent to main and apply faded appearance
+                if (!window.previewHasLaunched) {
+                    const rect = main ? main.getBoundingClientRect() : { right: 0, top: 0 };
+                    const gapStr = getComputedStyle(document.documentElement).getPropertyValue('--panel-gap');
+                    const gap = parseFloat(gapStr) || 40;
+                    panel.style.left = (rect.right + gap) + 'px';
+                    panel.style.top = Math.max(12, rect.top + 24) + 'px';
+                    panel.style.right = 'auto';
+                    panel.classList.add('initial-fade');
+                    window.previewHasLaunched = true;
+                    setTimeout(() => { panel.classList.remove('initial-fade'); }, 1500);
+                }
+            }
+
+            // Let CSS drive the smooth reposition when not actively dragging
+            if (main && !main.classList.contains('dragging-main')) {
+                main.style.transform = '';
+            }
+            if (isOpen) {
+                // Initialize 3D viewer when opening
+                initModelPreview();
+            } else {
+                // Dispose 3D viewer when closing
+                disposeModelPreview();
+            }
+        }
+        
+        // Close the side preview on Escape
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                const panel = document.getElementById('sidePreviewPanel');
+                if (panel && panel.classList.contains('open')) {
+                    toggleSidePreview();
+                }
+            }
+        });
+
+        // Keep centered alignment in sync on resize
+        window.addEventListener('resize', updatePreviewAlignmentVars);
+    </script>
+    <button class="preview-open-button" onclick="toggleSidePreview()" aria-controls="sidePreviewPanel" aria-expanded="false">Preview</button>
+    <div class="container">
+        <div class="title-bar">
+            <h2 class="window-title">memesneeze</h2>
+        </div>
+        
+        <h1 id="brandTitle" class="title-interactive"><span class="title-text">memesneeze</span><span class="cursor-underline" aria-hidden="true"></span></h1>
+        <p class="subtitle">
+            Free roblox client extension for disabled and challenged players
+        </p>
+        
+        <div class="preview-section">
+            <div class="preview-header">
+                <span class="preview-title">Preview</span>
+            </div>
+            <div class="video-container">
+                <video id="previewVideo" src="https://files.catbox.moe/vete37.mp4" autoplay muted loop playsinline preload="metadata" poster="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjIyNSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMTExIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iI2E0YTRhNCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkxvYWRpbmcuLi48L3RleHQ+PC9zdmc+">
+                    Your browser does not support the video tag.
+                </video>
+                <div id="loadingOverlay" class="loading-overlay">Loading preview...</div>
+                <button id="muteButton" class="mute-button" onclick="toggleMute()">unmute</button>
+                
+                <!-- Custom Video Controls -->
+                <div class="video-controls">
+                    <div class="control-row">
+                        <button id="playPauseBtn" class="control-button" onclick="togglePlayPause()">pause</button>
+                        <div class="time-display">
+                            <span id="currentTime">0:00</span>
+                            <span class="time-separator">/</span>
+                            <span id="totalTime">0:00</span>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-container">
+                        <div class="timeline-track" id="timelineTrack">
+                            <div class="timeline-progress" id="timelineProgress"></div>
+                            <div class="timeline-thumb" id="timelineThumb"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="control-row">
+                        <button id="volumeBtn" class="control-button" onclick="toggleVolume()">volume</button>
+                        <div class="volume-container">
+                            <div class="volume-track" id="volumeTrack">
+                                <div class="volume-progress" id="volumeProgress"></div>
+                                <div class="volume-thumb" id="volumeThumb"></div>
+                            </div>
+                        </div>
+                        <button id="fullscreenBtn" class="control-button" onclick="toggleFullscreen()">fullscreen</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="button-group">
+            <a href="#" class="download-button" onclick="showDownloadModal()">Download</a>
+            <a href="#" class="download-button" onclick="showKeyModal()">Get Key</a>
+        </div>
+        
+        <!-- Download Modal -->
+        <div id="downloadModal" class="modal-overlay">
+            <div class="modal">
+                <div class="modal-content">
+                    <h3 class="modal-title">Download</h3>
+                    <p class="modal-message">Coming soon...</p>
+                    <button class="modal-close" onclick="closeModal('downloadModal')">Close</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Key Modal -->
+        <div id="keyModal" class="modal-overlay">
+            <div class="modal">
+                <div class="modal-content">
+                    <h3 class="modal-title">Get Key</h3>
+                    <p class="modal-message">Click the button below to access the key generation system</p>
+                    <a href="linkvertise/" class="modal-close" style="text-decoration: none; display: inline-block; margin-top: 1rem;">Access Key System</a>
+                    <button class="modal-close" onclick="closeModal('keyModal')" style="margin-left: 0.5rem;">Close</button>
+                </div>
+            </div>
+        </div>
+
+        <p class="version">Beta • Windows</p>
+        <p class="status">Status: Development</p>
+    </div>
+
+    <div class="footer">
+        <div class="footer-links">
+            <a href="#">Terms</a>
+            <a href="#">Privacy</a>
+            <a href="https://discord.gg/mdi" class="discord-link">Discord</a>
+        </div>
+        
+        <!-- System Requirements Section -->
+        <div class="requirements-section">
+            <button class="requirements-toggle" onclick="toggleRequirements()">
+                <span id="requirementsText">System Requirements</span>
+                <span id="requirementsArrow">▼</span>
+            </button>
+            <div id="requirementsContent" class="requirements-content">
+                <div class="requirements-grid">
+                    <div class="requirements-column">
+                        <h4>Minimum</h4>
+                        <ul>
+                            <li><strong>OS:</strong> Windows 10/11 64-bit (admin)</li>
+                            <li><strong>CPU:</strong> Intel i3-6100 / AMD FX-6300</li>
+                            <li><strong>RAM:</strong> 4 GB (2 GB free)</li>
+                            <li><strong>GPU:</strong> DirectX 11 (1 GB VRAM)</li>
+                            <li><strong>Storage:</strong> 500 MB free</li>
+                            <li><strong>Network:</strong> 1 Mbps</li>
+                        </ul>
+                    </div>
+                    <div class="requirements-column">
+                        <h4>Recommended</h4>
+                        <ul>
+                            <li><strong>OS:</strong> Windows 11 64-bit (admin)</li>
+                            <li><strong>CPU:</strong> Intel i5-10400 / AMD Ryzen 5 3600</li>
+                            <li><strong>RAM:</strong> 8 GB (4 GB free)</li>
+                            <li><strong>GPU:</strong> GTX 1060 6GB / RX 580</li>
+                            <li><strong>Storage:</strong> 1 GB free (NVMe SSD)</li>
+                            <li><strong>Network:</strong> 10+ Mbps stable</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Side Preview Panel -->
+    <div id="sidePreviewPanel" class="side-preview-panel" role="dialog" aria-modal="false" aria-hidden="true" aria-label="3D Model Preview" data-supported-formats="obj,mtl" data-obj-url="https://files.catbox.moe/vrca6u.obj" data-mtl-url="https://files.catbox.moe/jwoaq9.mtl">
+        <div class="side-preview-header">
+            <span class="side-preview-title">3D Preview</span>
+            <div>
+                <button class="side-preview-align-toggle" onclick="togglePreviewAlignment()" aria-label="Toggle Preview Alignment" aria-pressed="false">Align: Right</button>
+                <button class="side-preview-close" onclick="toggleSidePreview()" aria-label="Close Preview">Close</button>
+            </div>
+        </div>
+        <div class="side-preview-content" id="modelPreviewArea"></div>
+    </div>
+</body>
+</html>
