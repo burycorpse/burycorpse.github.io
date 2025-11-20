@@ -1,5 +1,5 @@
 {
   "version": "roblox version", 
-  "softwareVersion": "Softwareversion", 
+  "softwareVersion": "Beta 0.1", 
   "changelogs": {}
 }
