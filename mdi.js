@@ -1,5 +1,5 @@
 {
-  "version": "version-fdda949d95e447e3", 
+  "version": "version-e380c8edc8f6477c", 
   "softwareVersion": "Beta 0.1", 
-  "changelogs": {}
+  "changelogs": {Updated to Latested Verison}
 }
