@@ -1,5 +1,5 @@
 {
   "version": "version-1849ecbff0824113",
-  "softwareVersion": "Beta 0.12",
+  "softwareVersion": "0.12",
   "changelogs": []
 }
