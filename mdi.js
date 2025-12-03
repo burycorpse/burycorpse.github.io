@@ -1,5 +1,5 @@
 {
-  "version": "version-e380c8edc8f6477c", 
-  "softwareVersion": "Beta 0.11", 
-  "changelogs": {}
+  "version": "version-1849ecbff0824113", 
+  "softwareVersion": "Beta 0.12", 
+  "changelogs": {Updated to latest verison}
 }
