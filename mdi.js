@@ -1,5 +1,14 @@
 {
   "version": "version-1849ecbff0824113",
-  "softwareVersion": "Beta 0.13",
-  "changelogs": "[+] Improved Box\n[+] Improved Assist (Camera + Ghost-Aim)\n[+] Reworked Smoothing\n[+] Fixed Ghost-Aim\n[+] Fixed Names (VISUALS)\n[+] Fixed Tools (VISUALS)\n[+] Improved Chams Outlines\n[+] Improved Response time (ASSIST, VISUALS)\n[+] Reworked Preview (VISUALS)\n[+] Added Aim Target to Orbit"
+  "softwareVersion": "Beta 0.14",
+  "changelogs": "[+] Revamped Visuals (Name, Box, Distance, Tool, Flags)
+[+] Top/Horizontal Health Bar
+[+] Improved Cache
+[+] Decreased CPU usage significantly
+[+] Local-Player Particle Orbit
+[+] Local-Player Trail
+[+] Revamped Desync
+[+] Real-time World Edit
+[+] Target Line
+[+] Improved Default Color Schemes"
 }
