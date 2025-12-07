@@ -1,5 +1,5 @@
 {
   "version": "version-1849ecbff0824113",
-  "softwareVersion": "Beta 0.13",
+  "softwareVersion": "Beta 0.14",
   "changelogs": "[+] Revamped Visuals (Name, Box, Distance, Tool, Flags)\n[+] Top/Horizontal Health Bar\n[+] Improved Cache\n[+] Decreased CPU usage significantly\n[+] Local-Player Particle Orbit\n[+] Local-Player Trail\n[+] Revamped Desync\n[+] Real-time World Edit\n[+] Target Line\n[+] Improved Default Color Schemes"
 }
