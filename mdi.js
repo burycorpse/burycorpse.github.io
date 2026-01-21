@@ -1,5 +1,5 @@
 {
-  "version": "version-eaebe135b3ec446b",
-  "softwareVersion": "Beta 0.15",
-  "changelogs": "[+] Updated to latest verison\n[+] Tool Icon\n[+] Improvement Game Supports (Bad Business, Phantom Forces]\n[~] Repaired all known bugs"
+  "version": "version-0f5223fb6e7e4955",
+  "softwareVersion": "PTesting",
+  "changelogs": "[+] version-0f5223fb6e7e4955"
 }
