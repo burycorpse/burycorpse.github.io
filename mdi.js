@@ -2,7 +2,7 @@
   "Platform": "Windows",
   "Versions": {
     "Software": "PTesting 10",
-    "Roblox": "version-db4634f0e27d4d36"
+    "Roblox": "version-3e7a57d7e53b4881"
   },
-  "Changelog": "[+] Local Player Mask (visuals dont draw over local player)\n[+] Aura Effects (Beta)"
+  "Changelog": "[+] Updated to latest Version"
 }
